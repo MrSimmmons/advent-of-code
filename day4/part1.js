@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const file = fs.readFileSync("./data.txt").toString().split("\r\n");
+const file = fs.readFileSync("./data.txt").toString().split(process.platform === "win32" ? "\r\n" : "\n");
 
 let total = 0;
 

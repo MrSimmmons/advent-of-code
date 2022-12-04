@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const file = fs.readFileSync("data.txt").toString().split("\n");
+const file = fs.readFileSync("./data.txt").toString().split(process.platform === "win32" ? "\r\n" : "\n");
 
 const arr = [[]];
 const finalArr = [];
